@@ -40,7 +40,7 @@ Instructions:
 - In the `Owner` class write a method called `add_pet(self, pet)` that adds pets to a `pets` list for the owner.
 - In the `Owner` class write a method called `remove_pet(self, pet_name)`
 that takes a pets name and removes the pet from the `Owners` `pets` list.
-- In the `Owner` class write a method called `sort_pets_by_name(self)` returns a sorted list of pet names.
+- In the `Owner` class write a method called `sort_pets_by_name(self)` returns a sorted list of pets by their names.
 
 ***
 
