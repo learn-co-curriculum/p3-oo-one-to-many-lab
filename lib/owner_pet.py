@@ -35,7 +35,7 @@ class Owner:
 
     def remove_pet(self, pet):
         if isinstance(pet, Pet):
-            if pet in self.pets:
+            if pet in self._pets:
                 self._pets.remove(pet)
             else:
                 raise ValueError("Pet not found in the list")
