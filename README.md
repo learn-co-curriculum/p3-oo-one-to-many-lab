@@ -2,7 +2,7 @@
 
 ## Learning Goals
 
-- Create one-to-many relationships.
+- Create a one-to-many relationship.
 
 ***
 
@@ -35,12 +35,13 @@ messages to complete your work in the `lib/` folder.
 
 Instructions:
 
-- Define a `Pet` and pass into the constructor a `name` and a `pet_type`.
-- Define an `Owner` class and pass into the constructor a `name`.
+- Define a `Pet` and pass into the constructor the properties `name` and a `pet_type`.
+- Define an `Owner` class and pass into the constructor a `name` property.
 - In the `Owner` class write a method called `add_pet(self, pet)` that adds pets to a `pets` list for the owner.
 - In the `Owner` class write a method called `remove_pet(self, pet_name)`
 that takes a pets name and removes the pet from the `Owners` `pets` list.
 - In the `Owner` class write a method called `sort_pets_by_name(self)` returns a sorted list of pets by their names.
+- The attributes of `Owner` and `Pet` should be protected and have getters and setters.
 
 ***
 
