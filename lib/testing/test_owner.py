@@ -1,48 +1,53 @@
-from owner_pet import Pet, Owner
 import pytest
+from owner_pet import Pet, Owner
 
-class TestOwner:
-  '''Class Owner in owner_pet.py'''
+def test_owner_init():
+    """Test Owner class initialization"""
+    owner = Owner("John")
+    assert owner.name == "John"
+    assert len(owner._pets) == 0
 
-def test_owner_methods():
-    owner = Owner("Alice")
-    pet1 = Pet("Buddy", "Dog")
-    pet2 = Pet("Milo", "Cat")
+def test_owner_add_pet_valid():
+    """Test Owner class add_pet method with valid input"""
 
-    assert owner.get_name() == "Alice"
-    owner.set_name("Bob")
-    assert owner.get_name() == "Bob"
-
-    owner.add_pet(pet1)
-    owner.add_pet(pet2)
-
-    assert len(owner._pets) == 2
-
-    owner.remove_pet(pet1)
-
+    owner = Owner("John")
+    pet = Pet("Buddy", "dog")
+    owner.add_pet(pet)
     assert len(owner._pets) == 1
-    assert pet2 in owner._pets
+    assert pet in owner._pets
+    assert pet.owner == owner
 
+
+def test_owner_add_pet_invalid():
+    """Test Owner class add_pet method with invalid input"""
+    owner = Owner("John")
     with pytest.raises(TypeError):
-        owner.add_pet("String")
+        owner.add_pet("not_pet_obj")
 
-    with pytest.raises(TypeError):
-        owner.remove_pet("String")
+def test_owner_remove_pet_valid():
+    """Test Owner class remove_pet method with valid input"""
+    owner = Owner("John")
+    pet = Pet("Buddy", "dog")
+    owner.add_pet(pet)
+    owner.remove_pet(pet)
+    assert len(owner._pets) == 0
+    assert pet not in owner._pets
 
+def test_owner_remove_pet_invalid():
+    """Test Owner class remove_pet method with invalid input"""
+    owner = Owner("John")
+    pet = Pet("Buddy", "dog")
     with pytest.raises(ValueError):
-        owner.remove_pet(pet1)
+        owner.remove_pet(pet)
 
-def test_get_sorted_pets():
-    owner = Owner("Alice")
-    pet1 = Pet("Buddy", "Dog")
-    pet2 = Pet("Milo", "Cat")
-    pet3 = Pet("Charlie", "Dog")
-
+def test_owner_get_sorted_pets():
+    """Test Owner class get_sorted_pets method"""
+    owner = Owner("John")
+    pet1 = Pet("Buddy", "dog")
+    pet2 = Pet("Whiskers", "cat")
+    pet3 = Pet("Max", "dog")
     owner.add_pet(pet1)
     owner.add_pet(pet2)
     owner.add_pet(pet3)
-
     sorted_pets = owner.get_sorted_pets()
-    sorted_pet_names = [pet.get_name() for pet in sorted_pets]
-
-    assert sorted_pet_names == ["Buddy", "Charlie", "Milo"]
+    assert sorted_pets == [pet1, pet3, pet2]
