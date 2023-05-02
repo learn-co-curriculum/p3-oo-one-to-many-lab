@@ -45,12 +45,6 @@ class Owner:
         else:
             raise TypeError("Input object is not of type Pet")
 
-    def remove_pet(self, pet):
-        if pet in self._pets:
-            self._pets.remove(pet)
-        else:
-            raise ValueError("Pet not found in the list")
-
     def get_sorted_pets(self):
         return sorted(self._pets, key=lambda pet: pet.name)
 

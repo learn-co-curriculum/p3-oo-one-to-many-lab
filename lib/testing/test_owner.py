@@ -24,21 +24,6 @@ def test_owner_add_pet_invalid():
     with pytest.raises(TypeError):
         owner.add_pet("not_pet_obj")
 
-def test_owner_remove_pet_valid():
-    """Test Owner class remove_pet method with valid input"""
-    owner = Owner("John")
-    pet = Pet("Buddy", "dog")
-    owner.add_pet(pet)
-    owner.remove_pet(pet)
-    assert len(owner._pets) == 0
-    assert pet not in owner._pets
-
-def test_owner_remove_pet_invalid():
-    """Test Owner class remove_pet method with invalid input"""
-    owner = Owner("John")
-    pet = Pet("Buddy", "dog")
-    with pytest.raises(ValueError):
-        owner.remove_pet(pet)
 
 def test_owner_get_sorted_pets():
     """Test Owner class get_sorted_pets method"""
