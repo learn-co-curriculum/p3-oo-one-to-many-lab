@@ -37,9 +37,8 @@ Instructions:
 
 - Define an `Owner` class and pass into the constructor a `name` property.
 - Define a `Pet` and pass into the constructor the `name`, `pet_type` and an optional `owner`.
-- In the `Owner` class write a method called `add_pet(self, pet)` that adds pets to a `pets` list for the owner.
-- In the `Owner` class write a method called `remove_pet(self, pet_name)`
-that takes a pets name and removes the pet from the `Owners` `pets` list.
+- Define a class variable `PET_TYPES = ["dog", "cat", "rodent", "bird", "reptile", "exotic"]` and validate that the `pet_type` is one of those types in the `__init__` method.
+- In the `Owner` class write a method called `add_pet(self, pet)` that adds pets to a `pets` list for the owner and should also populate the pet object with the owner.
 - In the `Owner` class write a method called `sort_pets_by_name(self)` returns a sorted list of pets by their names.
 - `Owner` and `Pet` should use `isinstance` to check types whenever classes are passed into methods.
 
