@@ -35,12 +35,20 @@ messages to complete your work in the `lib/` folder.
 
 Instructions:
 
-- Define an `Owner` class and pass into the constructor a `name` property.
-- Define a `Pet` and pass into the constructor the `name`, `pet_type` and an optional `owner`.
-- Define a class variable `PET_TYPES = ["dog", "cat", "rodent", "bird", "reptile", "exotic"]` and validate that the `pet_type` is one of those types in the `__init__` method.
-- In the `Owner` class write a method called `add_pet(self, pet)` that adds pets to a `pets` list for the owner and should also populate the pet object with the owner.
-- In the `Owner` class write a method called `sort_pets_by_name(self)` returns a sorted list of pets by their names.
-- `Owner` and `Pet` should use `isinstance` to check types whenever classes are passed into methods.
+- Define an `Owner` class and pass into the constructor a `name` argument.
+- Define a `Pet` and pass into the constructor its `name`, `pet_type` and an
+  optional `owner`.
+- Define a class variable
+  `PET_TYPES = ["dog", "cat", "rodent", "bird", "reptile", "exotic"]` and
+  validate that the `pet_type` is one of those types in the `__init__` method.
+- In the `Owner` class write a method called `pets(self)` that returns a full
+  list of the owner's pets.
+- In the `Owner` class write a method called `add_pet(self, pet)` that checks
+  that the the pet is of type `Pet` and adds the owner to the pet.
+- In the `Owner` class write a method called `sort_pets_by_name(self)` returns a
+  sorted list of pets by their names.
+- `Owner` and `Pet` should use `isinstance` to check types whenever classes are
+  passed into methods.
 
 ***
 
