@@ -41,14 +41,17 @@ Instructions:
 - Define a class variable
   `PET_TYPES = ["dog", "cat", "rodent", "bird", "reptile", "exotic"]` and
   validate that the `pet_type` is one of those types in the `__init__` method.
+  - `raise Exception` if this check fails.
+- Define a class variable `all` that stores all instances of the `Pet` class.
 - In the `Owner` class write a method called `pets(self)` that returns a full
   list of the owner's pets.
 - In the `Owner` class write a method called `add_pet(self, pet)` that checks
   that the the pet is of type `Pet` and adds the owner to the pet.
 - In the `Owner` class write a method called `sort_pets_by_name(self)` returns a
   sorted list of pets by their names.
-- `Owner` and `Pet` should use `isinstance` to check types whenever classes are
+- `Owner` and `Pet` should use `isinstance` to check types whenever instances are
   passed into methods.
+  - `raise Exception` if these checks fail.
 
 ***
 
