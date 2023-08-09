@@ -1,6 +1,7 @@
 # Created by https://www.gitignore.io/api/node
 
 .DS_Store
+.vscode
 
 ### Node ###
 # Logs

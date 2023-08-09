@@ -4,27 +4,28 @@
 
 - Create a one-to-many relationship.
 
-***
+---
 
 ## Key Vocab
 
 - **Class**: a bundle of data and functionality. Can be copied and modified to
-accomplish a wide variety of programming tasks.
+  accomplish a wide variety of programming tasks.
 - **Object**: the more common name for an instance. The two can usually be used
-interchangeably.
+  interchangeably.
 - **Object-Oriented Programming**: programming that is oriented around data
-(made mobile and changeable in **objects**) rather than functionality. Python
-is an object-oriented programming language.
+  (made mobile and changeable in **objects**) rather than functionality. Python
+  is an object-oriented programming language.
 - **Function**: a series of steps that create, transform, and move data.
 - **Method**: a function that is defined inside of a class.
 
-***
+---
 
 ## Introduction
 
-In this lab we will implement a one-to-many relationship between a `Owner` and `Pet`.
+In this lab we will implement a one-to-many relationship between a `Owner` and
+`Pet`.
 
-***
+---
 
 ## Instructions
 
@@ -47,13 +48,13 @@ Instructions:
   list of the owner's pets.
 - In the `Owner` class write a method called `add_pet(self, pet)` that checks
   that the the pet is of type `Pet` and adds the owner to the pet.
-- In the `Owner` class write a method called `sort_pets_by_name(self)` returns a
+- In the `Owner` class write a method called `get_sorted_pets(self)` returns a
   sorted list of pets by their names.
-- `Owner` and `Pet` should use `isinstance` to check types whenever instances are
-  passed into methods.
+- `Owner` and `Pet` should use `isinstance` to check types whenever instances
+  are passed into methods.
   - `raise Exception` if these checks fail.
 
-***
+---
 
 ## Resources
 
